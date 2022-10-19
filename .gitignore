@@ -13,6 +13,9 @@ downloads/
 eggs/
 .eggs/
 *.egg-info/
+AUTHORS
+*Log
+.DS_Store
 Pip*
 __pycache__/
 /data/debug/*.json

@@ -1,14 +1,13 @@
 # -*- coding:utf8 -*- #
 # -----------------------------------------------------------------------------------
 # ProjectName:   PytestAssertError
-# FileName:     pytest_assert_error_plugin.py
+# FileName:     tests.py
 # Author:      Jakiro
-# Datetime:    2022/10/13 14:58
+# Datetime:    2022/10/13 19:17
 # Description:
 # 命名规则  文件名小写字母+下划线，类名大驼峰，方法、变量名小写字母+下划线连接
 # 常量大写，变量和常量用名词、方法用动词
 # -----------------------------------------------------------------------------------
-
 def pytest_addoption(parser):
     parser.addoption(
         "--change_assert",
@@ -16,6 +15,7 @@ def pytest_addoption(parser):
         default="off",
         help="'Default 'off' for change, option: on or off"
     )
+
 
 def pytest_assertrepr_compare(op, left, right):
     if op == '==':
